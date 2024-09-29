@@ -8,6 +8,8 @@ function App() {
   const baseURL = "http://localhost:8080";
 
   useEffect(() => {
+    
+    if (events.length == 0) fetchEvents();
     let timer = setInterval(() => fetchEvents(), 10000);
 
     return () => clearInterval(timer);
