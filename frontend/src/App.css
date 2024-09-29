@@ -1,42 +1,77 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container-fluid {
+  background: linear-gradient(to right, black, #434343);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-control label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control input {
+  width: 400px;
+  height: 30px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding-left: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-control:last-child {
+  align-items: flex-end;
 }
-
-.card {
-  padding: 2em;
+.form-control button {
+  width: 150px;
+  height: 30px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
 }
-
-.read-the-docs {
-  color: #888;
+.form-control button:hover {
+  cursor: pointer;
+  background-color: lightgreen;
+}
+.event-container {
+  margin-top: 30px;
+  width: 400px;
+}
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.event-card {
+  display: flex;
+  height: 25px;
+  align-items: center;
+  overflow-y: hidden;
+}
+.event-card img {
+  height: 40px;
+  width: 40px;
+  width: auto;
+}
+.event-card .tick {
+  height: 40px;
+  width: 53px;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }

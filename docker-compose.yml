@@ -67,6 +67,17 @@ services:
       rabbitmq:
         condition: service_healthy
 
+  webapp:
+    container_name: webapp
+    build: "./frontend"
+    ports:
+      - 3000:5173
+    restart: on-failure
+    networks:
+      - mynet
+    depends_on:
+      - api-gateway
+
 networks:
   mynet:
     driver: bridge
